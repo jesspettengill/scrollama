@@ -1,3 +1,6 @@
+/* Import the Alfa Slab One font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -68,18 +71,55 @@ nav {
 }
 
 #intro {
-  max-width: 40rem;
-  margin: 1rem auto;
+  position: relative;
+  background-image: url('img/george-floyd-statue.png');
+  background-size: auto 30%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .intro__hed {
+  font-family: 'Alfa Slab One';
   font-size: 2em;
-  margin: 2rem auto 0.5rem auto;
+  color: #ffffff;
+  margin: 0 auto 20px auto; /* Adjust margin to create space below */
 }
 
 .intro__dek {
-  color: #8a8a8a;
+  color: #8a8a8a; /* Color for additional text */
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 20px; /* Adjust distance from the bottom as needed */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent; /* Adjust arrow size as needed */
+  border-right: 20px solid transparent; /* Adjust arrow size as needed */
+  border-top: 30px solid #fff; /* Adjust arrow size and color as needed */
+  cursor: pointer;
+}
+
+.return-button {
+  position: absolute;
+  top: 20px; /* Adjust distance from the top */
+  left: 20px; /* Adjust distance from the left */
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 0.5em 1em; /* Adjust padding using relative units */
+  font-size: 1em; /* Adjust font size */
+  cursor: pointer;
 }
 
 .github-corner:hover .octo-arm {
@@ -114,7 +154,7 @@ nav {
 }
 
 #intro {
-  margin-bottom: 320px;
+  margin-bottom: 50px;
 }
 
 #outro {

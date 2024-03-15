@@ -77,31 +77,27 @@
 			font-size: 1.5rem;
 		}
 
-        #intro {
-            background-image: url('img/george-floyd-statue.png');
-            background-size: 100% auto; /* Set background-size to cover full width */
-            background-position: center;
-            /* You can add more styling properties as needed */
-        }
+		#intro {
+        background-image: url('/Users/jess/Documents/GitHub/scrollama/img/george-floyd-statue.png');
+        background-size: cover;
+        background-position: center;
+        width: 100%; /* Set the width to 100% */
+		}
 	</style>
 </head>
 
 <body>
 	<main>
-		<nav>
-			<div class="nav__examples">
-				<p>Examples:</p>
-				<a href="https://russellsamora.github.io/scrollama/basic">Back to Stories</a>
-			</div>
-		</nav>
 		<section id="intro">
-			<h1 class="intro__hed">The Life and Death of George Floyd</h1>
+			<button class="return-button"><a href="#"> Return to Stories</a></button>
+			<h1 class="intro__hed">The Life and Death <br/>of George Floyd</h1>
+			<div class="arrow-down" onclick="scrollToScrolly()"></div>
 		</section>
 
 		<section id="scrolly">
 			<article>
 				<div class="step" data-step="1">
-					<h3>May 25, 2020, 11:50 p.m.</h3>
+					<p><b>May 25, 2020</b></p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 				<div class="step" data-step="2">
@@ -184,6 +180,11 @@
 				})
 				.onStepEnter(handleStepEnter);
 		}
+
+		        function scrollToScrolly() {
+            const scrollySection = document.getElementById('scrolly');
+            scrollySection.scrollIntoView({ behavior: 'smooth' });
+        }
 
 		// kick things off
 		init();
